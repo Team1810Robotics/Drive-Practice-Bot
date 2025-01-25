@@ -45,6 +45,8 @@ public class RobotContainer {
         configureXbox();
     }
 
+    //TODO add way to switch between xbox and joystick/2
+
     @SuppressWarnings("unused")
     private void configureXbox() {
         // Note that X is defined as forward according to WPILib convention,
