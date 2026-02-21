@@ -38,7 +38,9 @@ public class RobotContainer {
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
     public RobotContainer() {
-        configureXbox();
+    configureXbox();
+ 	configureBindings();
+    autoChooser = AutoBuilder.buildAutoChooser();
     }
 
     //TODO add way to switch between xbox and joystick/2
@@ -107,6 +109,6 @@ public class RobotContainer {
     
 
     public Command getAutonomousCommand() {
-        return Commands.print("No autonomous command configured");
+    return autoChooser.getSelected();
     }
 }
